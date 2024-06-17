@@ -10,8 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Serif&family=Poppins:wght@500&family=Prompt&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -44,22 +44,39 @@
                 </div>
                 <div class="button">
                     <!-- <a href="signin.html" target="_blank"><button>SIGN IN</button></a> -->
-                    <a href="tel:+911234567890"><button>CALL US</button></a>
-                    <a href="signin.html"><button>GET STARTED</button></a>
+                    <span class="call_us">&#128383; Call Us: +91-12345678900</span>
+                    <!-- <a href="tel:+9112345678900"><button>CALL US</button></a> -->
+                    <a href="index.html#Our_Services"><button>GET STARTED</button></a>
                 </div>
+
+                <div class="responsive">
+                <a href="tel:+9112345678900"><button>CALL US</button></a>
+                <button class="menu_open" style="display: flex; padding: 8px;" onclick = "menu_toggle();"><img src="images/menu bar_beige.png" alt="" style="width: 17px;"></button>
+                <div class="menu_close" onclick = "menu_toggle();">
+                <button style="padding: 6px 8px;"><img src="images/close bar_beige.png" alt="" style="width: 17px; display: flex;"></button>
+                <ul>
+                    <li><a href="index.html" id="home">HOME</a></li>
+                    <li><a href="#About_us">ABOUT US</a></li>
+                    <li><a href="#Our_Services">OUR&nbsp;SERVICES</a></li>
+                    <li><a href="careers.html">CAREERS</a></li>
+                    <li><a href="#Contact">CONTACT&nbsp;US</a></li>
+                </ul>
+                
+                </div>
+                </div>
+
                 <div id="test">
-                    <p>Welcome to <span style="font-size: 35px; font-family: Bangers, system-ui;">Vinay Educational Hub,</span><br> where knowledge meets opportunity. We are committed to
+                    <p>Welcome to <span style="font-size: 35px; font-family: Bangers, system-ui;">Vinay Educational
+                            Hub,</span><br> where knowledge meets opportunity. We are committed to
                         fostering learning environments that ignite curiosity and empower individuals to achieve their
                         goals. Our dedication propels us to develop educational solutions that go beyond conventional
                         boundaries, ensuring a transformative experience for all. Step into our realm of learning and
                         embark on a journey of boundless possibilities with us.</p>
-                    <button class="pest">Learn More</button>
+                    <button class="pest" onclick="myFunction();">Learn More</button>
                 </div>
             </div>
         </div>
-        <div class="responsive" style="display: none;">
-            <button class="button"><img src="images/menu bar_white.png" alt="" style="width: 20px;"></button>
-        </div>
+
     </main>
 
     <section>
@@ -112,7 +129,7 @@
             <div class="contact">
 
                 <div class="form">
-                    <form id="form" action="action.php" method="POST" target="_blank" onsubmit="myVinay();">
+                    <form id="form" action="action.php" method="POST" target="_blank">
                         <label for="name">Name:</label><br>
                         <input type="text" name="name" id="name" required><br><br>
 
@@ -137,13 +154,10 @@
     <footer>
         &#169;2022-23&nbsp;&nbsp;&nbsp;&nbsp; www.vinayeducationalhub.com &nbsp;&nbsp;&nbsp;&nbsp;All rights reserved.
     </footer>
+
     <script>
 
-        function vinay() {
-            event.preventDefault()
-            const vinay = document.getElementsByTagName('body');
-            return vinay;
-        }
+       
 
         let Items = document.querySelectorAll('.items');
 
@@ -164,12 +178,10 @@
             });
         };
 
-        function myVinay() {
-            document.getElementById('form').reset();
-            document.getElementById('form').reset();
-        }
+       
 
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

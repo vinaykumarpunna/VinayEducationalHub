@@ -87,7 +87,7 @@
         .button {
             display: flex;
             flex-wrap: wrap;
-            /* justify-content: space-between; */
+            justify-content: space-between;
             align-items: center;
             /* box-sizing: border-box;
             border: 10px SOLID red; */
@@ -114,6 +114,7 @@
             /* transform:translateY(-5px); */
             /* transition-delay: 0.2s; */
             scale: 1.03;
+            transition: all 0.2s ease-in-out;
 
         }
 
@@ -162,7 +163,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            
+
         }
 
         .pest {
@@ -191,7 +192,7 @@
             /* background-color: rgba(243, 82, 82, 0.651); */
             /* background-color: rgba(243, 82, 82, 0.872); */
             /* border-radius: 20%; */
-            color: rgba(243, 82, 82, 0.872);
+            /* color: rgba(243, 82, 82, 0.872); */
             color: #F9CC0B;
         }
 
@@ -246,6 +247,12 @@
             }
         }
 
+        @media screen and (max-width: 500px) {
+            .upper {
+                background-color: rgba(0, 0, 0, 0.731);
+            }
+        }
+
 
         .Heading {
             text-align: center;
@@ -291,7 +298,7 @@
                 height: 70vh;
                 padding: 3% 4% 3% 4%;
             }
-            
+
         }
 
         @media (max-aspect-ratio: 16/9) {
@@ -398,13 +405,13 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 30px;
             padding: 20px;
         }
 
         .form {
             text-align: left;
-            }
+        }
 
         .contact_submit {
             cursor: pointer;
@@ -457,4 +464,110 @@
             border: 0px;
             outline: none;
             resize: none;
+        }
+
+        .responsive {
+            display: none;
+        }
+
+        .menu_close {
+            display: none;
+            min-height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* bottom: 0; */
+            right: 0;
+            width: 100%;
+            /* height: fit-content; */
+            background-color: #fff;
+            background-color: #02347B;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            flex-direction: column;
+            /* gap: 0.5rem; */
+            z-index: 10001;
+        }
+
+        .menu_close button {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+        }
+
+        .menu_close ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            align-self: center;
+
+        }
+
+        .menu_close li {
+           list-style: none;
+           padding-bottom: 40px;
+        }
+
+        .menu_close a {
+            text-decoration: none;
+            color: beige;
+            font-size: 14px;
+            font-size: 1.2em;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .menu_close a:hover {
+            color: #EFCE15;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .responsive {
+                display: flex;
+            }
+
+            .nav,
+            .button {
+                display: none;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .upper {
+                padding: 10px;
+            }
+
+            footer {
+                padding: 20px 0px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            #name, #email {
+                width: 350px;
+            }
+        }
+
+        @media screen and (max-width: 390px) {
+            #name, #email {
+                width: 320px;
+            }
+        }
+
+        @media screen and (max-width: 330px) {
+            .responsive > a{
+                display: none;
+            }
+
+            #name, #email {
+                width: 280px;
+            }
+        }
+
+        .call_us{
+            cursor: text;
+            color: white;
+            text-decoration: none;
+            font-size: 0.8em;
+            font-family: 'Prompt', sans-serif;
         }
