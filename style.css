@@ -466,9 +466,9 @@
             resize: none;
         }
 
-        /* .responsive {
+        .responsive {
             display: none;
-        } */
+        }
 
         .menu_close {
             display: none;
