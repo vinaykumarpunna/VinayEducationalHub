@@ -1,10 +1,13 @@
-ErrorDocument 404 /404.html
-
 RewriteEngine On
+
+# Remove trailing slash (if it exists) from non-directory URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-RewriteEngine On
+# Add trailing slash to URLs that do not have one
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !(.*)/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+# Custom 404 Error Page
+ErrorDocument 404 /errors/not_found.html
