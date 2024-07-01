@@ -571,3 +571,32 @@
             font-size: 0.8em;
             font-family: 'Prompt', sans-serif;
         }
+
+        .container{
+            min-height: 80vh;
+            background-color: #94c6df;
+            color: rgb(11, 20, 23);
+            font-family: 'Prompt', sans-serif;
+        }
+
+        .error_handle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 5em 3em;
+        }
+
+        .error_handle h1{
+            font-size: 3em;
+        }
+
+        .error_handle p{
+            margin-top: -1em;
+            font-size: 1em;
+        }
+
+        .error_handle button{
+            background-color: #093d52;
+            border: none;
+        }
